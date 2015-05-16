@@ -9,40 +9,40 @@ class Node():
 
 
 class BST():
-	def __init__(self):
-		self.root = None
+    def __init__(self):
+        self.root = None
 	
-	def insert(self, value):
-		if self.root is None:
-			self.root = Node(value)
-			return
+    def insert(self, value):
+        if self.root is None:
+            self.root = Node(value)
+            return
 		
-		p = None
-		node = self.root
-		while node is not None:
-			p = node
-			if value < node.value:
-				node = node.left
-			else:
-				node = node.right
+        p = None
+        node = self.root
+        while node is not None:
+            p = node
+            if value < node.value:
+                node = node.left
+            else:
+                node = node.right
 
-		if value < p.value:
-			p.left = Node(value)
-		else:
-			p.right = Node(value)
+            if value < p.value:
+                p.left = Node(value)
+         else:
+             p.right = Node(value)
 	
-	def display(self):
-		node = self.root
+    def display(self):
+        node = self.root
 		
-		def show(node):
-			if node is None:
-				return
-			show(node.left)
-			print node.value,
-			show(node.right)
+        def show(node):
+            if node is None:
+                return
+            show(node.left)
+            print node.value,
+            show(node.right)
 			
-		show(node)
-		print ""
+        show(node)
+        print ""
 	
 	
 		
@@ -59,4 +59,4 @@ def test():
 
 
 if __name__ == '__main__':
-	test()
+    test()
