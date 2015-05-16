@@ -1,10 +1,11 @@
+# shennian
 class Node():
-	def __init__(self, value = 0, left = None, 
-						right = None, parent = None):
-		self.value = value
-		self.left = left
-		self.right = right
-		self.parent = parent
+    def __init__(self, value = 0, left = None, 
+	                right = None, parent = None):
+        self.value = value
+        self.left = left
+        self.right = right
+        self.parent = parent
 
 
 class BST():
@@ -48,13 +49,13 @@ class BST():
 		
 
 def test():
-	nums = [7, 5, 9, 4, -3, 1]
-	a = BST()
-	for i in nums:
-		a.insert(i)
-	a.display()
-	a.insert(5)
-	a.display()
+    nums = [7, 5, 9, 4, -3, 1]
+    a = BST()
+    for i in nums:
+        a.insert(i)
+    a.display()
+    a.insert(5)
+    a.display()
 
 
 if __name__ == '__main__':
